@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quantum De-Cryption</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+      .glow-medium svg {
+        filter: drop-shadow(0 0 6px #22d3ee) drop-shadow(0 0 12px #22d3ee44);
+        transition: filter 0.3s ease-in-out;
+      }
+      .glow-high svg {
+        filter: drop-shadow(0 0 10px #f0abfc) drop-shadow(0 0 20px #f0abfc66);
+        transition: filter 0.3s ease-in-out;
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              mono: ['"Roboto Mono"', 'monospace'],
+            },
+            colors: {
+              'cyber-bg': '#0d0221',
+              'cyber-surface': '#1a0d38',
+              'cyber-border': '#3c1e70',
+              'cyber-text': '#c0c0c0',
+              'cyber-cyan': '#22d3ee',
+              'cyber-magenta': '#f0abfc',
+              'cyber-green': '#4ade80',
+              'cyber-red': '#f87171',
+              'cyber-yellow': '#facc15',
+            },
+            keyframes: {
+              'crash-glitch': {
+                  '0%, 100%': { transform: 'translate(0, 0) skew(0)', opacity: '1' },
+                  '10%': { transform: 'translate(-10px, 10px) skew(-5deg)', opacity: '0.8' },
+                  '30%': { transform: 'translate(10px, -10px) skew(5deg)', opacity: '1' },
+                  '50%': { transform: 'translate(-10px, -5px) skew(-3deg)', opacity: '0.9' },
+                  '70%': { transform: 'translate(10px, 5px) skew(3deg)', opacity: '1' },
+                  '90%': { transform: 'translate(-5px, 10px) skew(-1deg)', opacity: '0.85' },
+              },
+              pulse: {
+                '0%, 100%': { opacity: 1, transform: 'scale(1)' },
+                '50%': { opacity: 0.8, transform: 'scale(1.02)' },
+              },
+              scanline: {
+                '0%': { transform: 'translateY(0)' },
+                '100%': { transform: 'translateY(100%)' },
+              },
+              shake: {
+                '10%, 90%': { transform: 'translate3d(-1px, 0, 0)' },
+                '20%, 80%': { transform: 'translate3d(2px, 0, 0)' },
+                '30%, 50%, 70%': { transform: 'translate3d(-4px, 0, 0)' },
+                '40%, 60%': { transform: 'translate3d(4px, 0, 0)' },
+              },
+              streamFlow: {
+                '0%': { backgroundPosition: '0 0' },
+                '100%': { backgroundPosition: '0 400px' },
+              }
+            },
+            animation: {
+              'crash-glitch': 'crash-glitch 0.4s ease-in-out 1',
+              pulse: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              scanline: 'scanline 10s linear infinite',
+              shake: 'shake 0.4s cubic-bezier(.36,.07,.19,.97) both',
+              'stream-flow': 'streamFlow 5s linear infinite',
+            }
+          }
+        }
+      }
+    </script>
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "recharts": "https://aistudiocdn.com/recharts@^3.2.1"
+  }
+}
+</script>
+</head>
+<body class="font-mono bg-cyber-bg text-cyber-text">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>
