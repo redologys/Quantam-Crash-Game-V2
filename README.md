@@ -1,20 +1,28 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Quantum Crash Game
 
-# Run and deploy your AI Studio app
+A browser-based crash-game prototype with a sci-fi interface, multiplier-based rounds, side bets, round history, and transparent game-state displays.
 
-This contains everything you need to run your app locally.
+> This is a software prototype for demonstration and entertainment. It has no real-money or brokerage integrations.
 
-View your app in AI Studio: https://ai.studio/apps/drive/1N56TK0QfdqU_oJPTjBTOKh7bJwr2wBJz
+## Features
+
+- Multiplier-based crash rounds
+- Cash-out interactions and side-bet options
+- Round history and game-state feedback
+- Provably-fair information display
+- Responsive React interface
+
+## Tech Stack
+
+React, TypeScript, Vite, and Recharts.
 
 ## Run Locally
 
-**Prerequisites:**  Node.js
+```bash
+npm install
+npm run dev
+```
 
+## Status
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+This repository is a public product showcase. It does not process payments or connect to real-money systems.
